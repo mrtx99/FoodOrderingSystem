@@ -168,7 +168,7 @@ namespace FoodOrderingSystem.GUI
             // 
             // tabPage_addmanager
             // 
-            this.tabPage_addmanager.BackColor = System.Drawing.Color.Red;
+            this.tabPage_addmanager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tabPage_addmanager.Controls.Add(this.txt_address);
             this.tabPage_addmanager.Controls.Add(this.label2);
             this.tabPage_addmanager.Controls.Add(this.txt_phone);
