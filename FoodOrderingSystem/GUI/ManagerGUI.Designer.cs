@@ -31,18 +31,18 @@ namespace FoodOrderingSystem.GUI
         {
             this.tabControl_manager = new System.Windows.Forms.TabControl();
             this.tabP_pendingorders = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_decline = new System.Windows.Forms.Button();
+            this.btn_accept = new System.Windows.Forms.Button();
             this.tabP_paymenthistory = new System.Windows.Forms.TabPage();
             this.listView_paymenthistory = new System.Windows.Forms.ListView();
             this.columnHeader_paymentid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_userid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_orderid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_accept = new System.Windows.Forms.Button();
-            this.btn_decline = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl_manager.SuspendLayout();
             this.tabP_pendingorders.SuspendLayout();
-            this.tabP_paymenthistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabP_paymenthistory.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_manager
@@ -58,6 +58,7 @@ namespace FoodOrderingSystem.GUI
             // 
             // tabP_pendingorders
             // 
+            this.tabP_pendingorders.BackColor = System.Drawing.Color.Orange;
             this.tabP_pendingorders.Controls.Add(this.dataGridView1);
             this.tabP_pendingorders.Controls.Add(this.btn_decline);
             this.tabP_pendingorders.Controls.Add(this.btn_accept);
@@ -67,11 +68,41 @@ namespace FoodOrderingSystem.GUI
             this.tabP_pendingorders.Size = new System.Drawing.Size(793, 428);
             this.tabP_pendingorders.TabIndex = 0;
             this.tabP_pendingorders.Text = "Pending orders";
-            this.tabP_pendingorders.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(367, 142);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // btn_decline
+            // 
+            this.btn_decline.BackColor = System.Drawing.Color.Red;
+            this.btn_decline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_decline.Location = new System.Drawing.Point(613, 393);
+            this.btn_decline.Name = "btn_decline";
+            this.btn_decline.Size = new System.Drawing.Size(75, 23);
+            this.btn_decline.TabIndex = 1;
+            this.btn_decline.Text = "Decline";
+            this.btn_decline.UseVisualStyleBackColor = false;
+            // 
+            // btn_accept
+            // 
+            this.btn_accept.BackColor = System.Drawing.Color.PaleGreen;
+            this.btn_accept.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_accept.Location = new System.Drawing.Point(709, 393);
+            this.btn_accept.Name = "btn_accept";
+            this.btn_accept.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_accept.Size = new System.Drawing.Size(75, 23);
+            this.btn_accept.TabIndex = 0;
+            this.btn_accept.Text = "Accept";
+            this.btn_accept.UseVisualStyleBackColor = false;
             // 
             // tabP_paymenthistory
             // 
-            this.tabP_paymenthistory.BackColor = System.Drawing.Color.Honeydew;
+            this.tabP_paymenthistory.BackColor = System.Drawing.Color.Orange;
             this.tabP_paymenthistory.Controls.Add(this.listView_paymenthistory);
             this.tabP_paymenthistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabP_paymenthistory.Location = new System.Drawing.Point(4, 22);
@@ -113,37 +144,6 @@ namespace FoodOrderingSystem.GUI
             this.columnHeader_orderid.Text = "Order ID";
             this.columnHeader_orderid.Width = 125;
             // 
-            // btn_accept
-            // 
-            this.btn_accept.BackColor = System.Drawing.Color.PaleGreen;
-            this.btn_accept.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_accept.Location = new System.Drawing.Point(709, 393);
-            this.btn_accept.Name = "btn_accept";
-            this.btn_accept.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_accept.Size = new System.Drawing.Size(75, 23);
-            this.btn_accept.TabIndex = 0;
-            this.btn_accept.Text = "Accept";
-            this.btn_accept.UseVisualStyleBackColor = false;
-            // 
-            // btn_decline
-            // 
-            this.btn_decline.BackColor = System.Drawing.Color.Red;
-            this.btn_decline.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_decline.Location = new System.Drawing.Point(613, 393);
-            this.btn_decline.Name = "btn_decline";
-            this.btn_decline.Size = new System.Drawing.Size(75, 23);
-            this.btn_decline.TabIndex = 1;
-            this.btn_decline.Text = "Decline";
-            this.btn_decline.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(367, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 2;
-            // 
             // ManagerGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,8 +156,8 @@ namespace FoodOrderingSystem.GUI
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerGUI_FormClosing);
             this.tabControl_manager.ResumeLayout(false);
             this.tabP_pendingorders.ResumeLayout(false);
-            this.tabP_paymenthistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabP_paymenthistory.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

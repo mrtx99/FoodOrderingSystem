@@ -72,7 +72,7 @@ namespace FoodOrderingSystem.GUI
             // 
             // tabPage_addfooditem
             // 
-            this.tabPage_addfooditem.BackColor = System.Drawing.Color.DarkOrange;
+            this.tabPage_addfooditem.BackColor = System.Drawing.Color.Orange;
             this.tabPage_addfooditem.Controls.Add(this.btn_fooditemadd);
             this.tabPage_addfooditem.Controls.Add(this.txt_itemtype);
             this.tabPage_addfooditem.Controls.Add(this.txt_itemprice);
@@ -168,7 +168,7 @@ namespace FoodOrderingSystem.GUI
             // 
             // tabPage_addmanager
             // 
-            this.tabPage_addmanager.BackColor = System.Drawing.Color.SandyBrown;
+            this.tabPage_addmanager.BackColor = System.Drawing.Color.Orange;
             this.tabPage_addmanager.Controls.Add(this.txt_address);
             this.tabPage_addmanager.Controls.Add(this.label2);
             this.tabPage_addmanager.Controls.Add(this.txt_phone);
