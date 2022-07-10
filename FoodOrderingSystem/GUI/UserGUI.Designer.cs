@@ -38,6 +38,7 @@ namespace FoodOrderingSystem.GUI
             this.datagrid_fitemdiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_profile = new System.Windows.Forms.Button();
             this.btn_userhistory = new System.Windows.Forms.Button();
+            this.btn_addtocart = new System.Windows.Forms.Button();
             this.btn_cart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_menu)).BeginInit();
             this.SuspendLayout();
@@ -114,15 +115,27 @@ namespace FoodOrderingSystem.GUI
             this.btn_userhistory.UseVisualStyleBackColor = true;
             this.btn_userhistory.Click += new System.EventHandler(this.btn_userhistory_Click);
             // 
+            // btn_addtocart
+            // 
+            this.btn_addtocart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addtocart.Location = new System.Drawing.Point(549, 415);
+            this.btn_addtocart.Name = "btn_addtocart";
+            this.btn_addtocart.Size = new System.Drawing.Size(129, 23);
+            this.btn_addtocart.TabIndex = 4;
+            this.btn_addtocart.Text = "Add to Cart";
+            this.btn_addtocart.UseVisualStyleBackColor = true;
+            this.btn_addtocart.Click += new System.EventHandler(this.btn_addtocart_Click);
+            // 
             // btn_cart
             // 
             this.btn_cart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cart.Location = new System.Drawing.Point(549, 415);
+            this.btn_cart.Location = new System.Drawing.Point(711, 54);
             this.btn_cart.Name = "btn_cart";
-            this.btn_cart.Size = new System.Drawing.Size(129, 23);
-            this.btn_cart.TabIndex = 4;
-            this.btn_cart.Text = "Add to Cart";
+            this.btn_cart.Size = new System.Drawing.Size(77, 23);
+            this.btn_cart.TabIndex = 5;
+            this.btn_cart.Text = "Cart";
             this.btn_cart.UseVisualStyleBackColor = true;
+            this.btn_cart.Click += new System.EventHandler(this.btn_cart_Click);
             // 
             // UserGUI
             // 
@@ -131,6 +144,7 @@ namespace FoodOrderingSystem.GUI
             this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_cart);
+            this.Controls.Add(this.btn_addtocart);
             this.Controls.Add(this.btn_userhistory);
             this.Controls.Add(this.btn_profile);
             this.Controls.Add(this.dataGridView_menu);
@@ -156,6 +170,7 @@ namespace FoodOrderingSystem.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn datagrid_fitemdiscount;
         private System.Windows.Forms.Button btn_profile;
         private System.Windows.Forms.Button btn_userhistory;
+        private System.Windows.Forms.Button btn_addtocart;
         private System.Windows.Forms.Button btn_cart;
     }
 }

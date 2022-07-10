@@ -59,7 +59,25 @@ namespace FoodOrderingSystem.GUI
 
         private void UserGUI_Load_1(object sender, EventArgs e)
         {
+
+
+            
            
+        }
+
+        private void btn_addtocart_Click(object sender, EventArgs e)
+        {
+
+
+
+            MessageBox.Show("successfully added into cart!", "Adding item in cart");
+        }
+
+        private void btn_cart_Click(object sender, EventArgs e)
+        {
+            CartGUI cart = new CartGUI();
+            this.Hide();
+            cart.Show();
         }
     }
 }

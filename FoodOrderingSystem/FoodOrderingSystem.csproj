@@ -69,6 +69,12 @@
     <Compile Include="GUI\AdminGUI.Designer.cs">
       <DependentUpon>AdminGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CartGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CartGUI.Designer.cs">
+      <DependentUpon>CartGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HistoryGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\AdminGUI.resx">
       <DependentUpon>AdminGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CartGUI.resx">
+      <DependentUpon>CartGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HistoryGUI.resx">
       <DependentUpon>HistoryGUI.cs</DependentUpon>
