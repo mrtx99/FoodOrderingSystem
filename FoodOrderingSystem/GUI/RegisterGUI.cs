@@ -34,5 +34,18 @@ namespace FoodOrderingSystem.GUI
                 }
             }
         }
+
+        private void btn_Register_Click(object sender, EventArgs e)
+        {
+
+
+
+            //-----------Message box and return to login GUI==================================
+            MessageBox.Show("Account is created, return to Login screen!");
+            LoginGUI log = new LoginGUI();
+            this.Dispose();
+            log.Show();
+
+        }
     }
 }

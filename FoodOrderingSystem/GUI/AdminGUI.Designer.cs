@@ -84,7 +84,7 @@ namespace FoodOrderingSystem.GUI
             this.tabPage_addfooditem.Controls.Add(this.lbl_itemid);
             this.tabPage_addfooditem.Location = new System.Drawing.Point(4, 22);
             this.tabPage_addfooditem.Name = "tabPage_addfooditem";
-            this.tabPage_addfooditem.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage_addfooditem.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_addfooditem.Size = new System.Drawing.Size(768, 415);
             this.tabPage_addfooditem.TabIndex = 0;
             this.tabPage_addfooditem.Text = "Add Food Items";
@@ -184,7 +184,7 @@ namespace FoodOrderingSystem.GUI
             this.tabPage_addmanager.Controls.Add(this.lbl_userid);
             this.tabPage_addmanager.Location = new System.Drawing.Point(4, 22);
             this.tabPage_addmanager.Name = "tabPage_addmanager";
-            this.tabPage_addmanager.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage_addmanager.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_addmanager.Size = new System.Drawing.Size(768, 415);
             this.tabPage_addmanager.TabIndex = 1;
             this.tabPage_addmanager.Text = "Add Manager";
@@ -192,8 +192,9 @@ namespace FoodOrderingSystem.GUI
             // txt_address
             // 
             this.txt_address.Location = new System.Drawing.Point(362, 272);
+            this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(180, 20);
+            this.txt_address.Size = new System.Drawing.Size(180, 69);
             this.txt_address.TabIndex = 21;
             // 
             // label2
@@ -225,7 +226,7 @@ namespace FoodOrderingSystem.GUI
             // 
             // btn_addmanager
             // 
-            this.btn_addmanager.Location = new System.Drawing.Point(467, 319);
+            this.btn_addmanager.Location = new System.Drawing.Point(467, 347);
             this.btn_addmanager.Name = "btn_addmanager";
             this.btn_addmanager.Size = new System.Drawing.Size(75, 23);
             this.btn_addmanager.TabIndex = 17;
@@ -308,7 +309,7 @@ namespace FoodOrderingSystem.GUI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl_admin);
             this.Name = "AdminGUI";
-            this.Text = "AdminGUI";
+            this.Text = "Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminGUI_FormClosing);
             this.tabControl_admin.ResumeLayout(false);
             this.tabPage_addfooditem.ResumeLayout(false);

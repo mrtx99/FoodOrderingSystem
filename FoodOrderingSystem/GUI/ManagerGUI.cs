@@ -35,5 +35,30 @@ namespace FoodOrderingSystem.GUI
                 }
             }
         }
+
+        private void dataGridView_pendingorders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_decline_Click(object sender, EventArgs e)
+        {
+            string a;
+
+            MessageBox.Show("Order is declined!");
+           
+
+        }
+
+        private void btn_accept_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Order is Accepted!");
+
+        }
+
+        private void ManagerGUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,8 +51,9 @@ namespace FoodOrderingSystem.GUI
             // txt_newaddress
             // 
             this.txt_newaddress.Location = new System.Drawing.Point(562, 437);
+            this.txt_newaddress.Multiline = true;
             this.txt_newaddress.Name = "txt_newaddress";
-            this.txt_newaddress.Size = new System.Drawing.Size(180, 20);
+            this.txt_newaddress.Size = new System.Drawing.Size(180, 75);
             this.txt_newaddress.TabIndex = 34;
             // 
             // lbl_newaddress
@@ -156,12 +157,13 @@ namespace FoodOrderingSystem.GUI
             // 
             this.btn_Register.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Register.Location = new System.Drawing.Point(650, 485);
+            this.btn_Register.Location = new System.Drawing.Point(650, 518);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(92, 23);
             this.btn_Register.TabIndex = 30;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // pictureBox1
             // 
@@ -205,7 +207,7 @@ namespace FoodOrderingSystem.GUI
             this.Controls.Add(this.lbl_newusername);
             this.Controls.Add(this.lbl_newuserid);
             this.Name = "RegisterGUI";
-            this.Text = "RegisterGUI";
+            this.Text = "Register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterGUI_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_registerpage)).EndInit();

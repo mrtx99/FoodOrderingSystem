@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -69,6 +69,12 @@
     <Compile Include="GUI\AdminGUI.Designer.cs">
       <DependentUpon>AdminGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HistoryGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HistoryGUI.Designer.cs">
+      <DependentUpon>HistoryGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="GUI\ManagerGUI.Designer.cs">
       <DependentUpon>ManagerGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProfileGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProfileGUI.Designer.cs">
+      <DependentUpon>ProfileGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\RegisterGUI.cs">
       <SubType>Form</SubType>
@@ -98,11 +110,17 @@
     <EmbeddedResource Include="GUI\AdminGUI.resx">
       <DependentUpon>AdminGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HistoryGUI.resx">
+      <DependentUpon>HistoryGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginGUI.resx">
       <DependentUpon>LoginGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ManagerGUI.resx">
       <DependentUpon>ManagerGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProfileGUI.resx">
+      <DependentUpon>ProfileGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RegisterGUI.resx">
       <DependentUpon>RegisterGUI.cs</DependentUpon>
@@ -138,13 +156,6 @@
     <Folder Include="DL\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GMR.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="GMR_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>GMR.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\welcome to new user.png" />
     <None Include="Resources\registernow.png" />
     <None Include="Resources\GMR logo.png" />
@@ -161,6 +172,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GM.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GM_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>GM.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

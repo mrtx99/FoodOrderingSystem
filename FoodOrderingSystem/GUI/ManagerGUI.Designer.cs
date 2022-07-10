@@ -31,7 +31,10 @@ namespace FoodOrderingSystem.GUI
         {
             this.tabControl_manager = new System.Windows.Forms.TabControl();
             this.tabP_pendingorders = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_pendingorders = new System.Windows.Forms.DataGridView();
+            this.pendingorderid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pendingorder_itemid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pendingorder_userid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_decline = new System.Windows.Forms.Button();
             this.btn_accept = new System.Windows.Forms.Button();
             this.tabP_paymenthistory = new System.Windows.Forms.TabPage();
@@ -41,7 +44,7 @@ namespace FoodOrderingSystem.GUI
             this.columnHeader_orderid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl_manager.SuspendLayout();
             this.tabP_pendingorders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pendingorders)).BeginInit();
             this.tabP_paymenthistory.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +62,7 @@ namespace FoodOrderingSystem.GUI
             // tabP_pendingorders
             // 
             this.tabP_pendingorders.BackColor = System.Drawing.Color.Orange;
-            this.tabP_pendingorders.Controls.Add(this.dataGridView1);
+            this.tabP_pendingorders.Controls.Add(this.dataGridView_pendingorders);
             this.tabP_pendingorders.Controls.Add(this.btn_decline);
             this.tabP_pendingorders.Controls.Add(this.btn_accept);
             this.tabP_pendingorders.Location = new System.Drawing.Point(4, 22);
@@ -69,13 +72,39 @@ namespace FoodOrderingSystem.GUI
             this.tabP_pendingorders.TabIndex = 0;
             this.tabP_pendingorders.Text = "Pending orders";
             // 
-            // dataGridView1
+            // dataGridView_pendingorders
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(367, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView_pendingorders.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dataGridView_pendingorders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_pendingorders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pendingorderid,
+            this.pendingorder_itemid,
+            this.pendingorder_userid});
+            this.dataGridView_pendingorders.Location = new System.Drawing.Point(8, 6);
+            this.dataGridView_pendingorders.Name = "dataGridView_pendingorders";
+            this.dataGridView_pendingorders.ReadOnly = true;
+            this.dataGridView_pendingorders.Size = new System.Drawing.Size(776, 378);
+            this.dataGridView_pendingorders.TabIndex = 2;
+            this.dataGridView_pendingorders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_pendingorders_CellContentClick);
+            // 
+            // pendingorderid
+            // 
+            this.pendingorderid.HeaderText = "order id";
+            this.pendingorderid.Name = "pendingorderid";
+            this.pendingorderid.ReadOnly = true;
+            this.pendingorderid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // pendingorder_itemid
+            // 
+            this.pendingorder_itemid.HeaderText = "Item id";
+            this.pendingorder_itemid.Name = "pendingorder_itemid";
+            this.pendingorder_itemid.ReadOnly = true;
+            // 
+            // pendingorder_userid
+            // 
+            this.pendingorder_userid.HeaderText = "User id";
+            this.pendingorder_userid.Name = "pendingorder_userid";
+            this.pendingorder_userid.ReadOnly = true;
             // 
             // btn_decline
             // 
@@ -87,6 +116,7 @@ namespace FoodOrderingSystem.GUI
             this.btn_decline.TabIndex = 1;
             this.btn_decline.Text = "Decline";
             this.btn_decline.UseVisualStyleBackColor = false;
+            this.btn_decline.Click += new System.EventHandler(this.btn_decline_Click);
             // 
             // btn_accept
             // 
@@ -99,6 +129,7 @@ namespace FoodOrderingSystem.GUI
             this.btn_accept.TabIndex = 0;
             this.btn_accept.Text = "Accept";
             this.btn_accept.UseVisualStyleBackColor = false;
+            this.btn_accept.Click += new System.EventHandler(this.btn_accept_Click);
             // 
             // tabP_paymenthistory
             // 
@@ -148,15 +179,16 @@ namespace FoodOrderingSystem.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Honeydew;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl_manager);
             this.Name = "ManagerGUI";
-            this.Text = "ManagerGUI";
+            this.Text = "Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerGUI_FormClosing);
+            this.Load += new System.EventHandler(this.ManagerGUI_Load);
             this.tabControl_manager.ResumeLayout(false);
             this.tabP_pendingorders.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pendingorders)).EndInit();
             this.tabP_paymenthistory.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -173,6 +205,9 @@ namespace FoodOrderingSystem.GUI
         private System.Windows.Forms.ColumnHeader columnHeader_orderid;
         private System.Windows.Forms.Button btn_decline;
         private System.Windows.Forms.Button btn_accept;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_pendingorders;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pendingorderid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pendingorder_itemid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pendingorder_userid;
     }
 }

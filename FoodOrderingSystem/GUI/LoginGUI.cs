@@ -19,11 +19,14 @@ namespace FoodOrderingSystem.GUI
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            UserGUI usergui = new UserGUI();
+
             AdminGUI ad = new AdminGUI();
             ManagerGUI mag = new ManagerGUI();
             this.Hide();
-            ad.Show();
-           //mag.Show();
+            //ad.Show();
+            //mag.Show();
+            usergui.Show();
         }
 
         private void LoginGUI_Load(object sender, EventArgs e)
