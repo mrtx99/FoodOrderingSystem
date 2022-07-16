@@ -43,7 +43,7 @@ namespace FoodOrderingSystem.GUI
 
         private void btn_decline_Click(object sender, EventArgs e)
         {
-            string a;
+           // string a;
 
             MessageBox.Show("Order is declined!");
            

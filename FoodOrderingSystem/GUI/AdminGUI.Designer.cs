@@ -31,6 +31,8 @@ namespace FoodOrderingSystem.GUI
         {
             this.tabControl_admin = new System.Windows.Forms.TabControl();
             this.tabPage_addfooditem = new System.Windows.Forms.TabPage();
+            this.txt_discount = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btn_fooditemadd = new System.Windows.Forms.Button();
             this.txt_itemtype = new System.Windows.Forms.TextBox();
             this.txt_itemprice = new System.Windows.Forms.TextBox();
@@ -73,6 +75,8 @@ namespace FoodOrderingSystem.GUI
             // tabPage_addfooditem
             // 
             this.tabPage_addfooditem.BackColor = System.Drawing.Color.Orange;
+            this.tabPage_addfooditem.Controls.Add(this.txt_discount);
+            this.tabPage_addfooditem.Controls.Add(this.label3);
             this.tabPage_addfooditem.Controls.Add(this.btn_fooditemadd);
             this.tabPage_addfooditem.Controls.Add(this.txt_itemtype);
             this.tabPage_addfooditem.Controls.Add(this.txt_itemprice);
@@ -84,14 +88,32 @@ namespace FoodOrderingSystem.GUI
             this.tabPage_addfooditem.Controls.Add(this.lbl_itemid);
             this.tabPage_addfooditem.Location = new System.Drawing.Point(4, 22);
             this.tabPage_addfooditem.Name = "tabPage_addfooditem";
-            this.tabPage_addfooditem.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_addfooditem.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage_addfooditem.Size = new System.Drawing.Size(768, 415);
             this.tabPage_addfooditem.TabIndex = 0;
             this.tabPage_addfooditem.Text = "Add Food Items";
             // 
+            // txt_discount
+            // 
+            this.txt_discount.Location = new System.Drawing.Point(254, 257);
+            this.txt_discount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_discount.Name = "txt_discount";
+            this.txt_discount.Size = new System.Drawing.Size(180, 20);
+            this.txt_discount.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(124, 263);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Discount";
+            // 
             // btn_fooditemadd
             // 
-            this.btn_fooditemadd.Location = new System.Drawing.Point(359, 262);
+            this.btn_fooditemadd.Location = new System.Drawing.Point(358, 301);
             this.btn_fooditemadd.Name = "btn_fooditemadd";
             this.btn_fooditemadd.Size = new System.Drawing.Size(75, 23);
             this.btn_fooditemadd.TabIndex = 8;
@@ -184,7 +206,7 @@ namespace FoodOrderingSystem.GUI
             this.tabPage_addmanager.Controls.Add(this.lbl_userid);
             this.tabPage_addmanager.Location = new System.Drawing.Point(4, 22);
             this.tabPage_addmanager.Name = "tabPage_addmanager";
-            this.tabPage_addmanager.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_addmanager.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage_addmanager.Size = new System.Drawing.Size(768, 415);
             this.tabPage_addmanager.TabIndex = 1;
             this.tabPage_addmanager.Text = "Add Manager";
@@ -347,5 +369,7 @@ namespace FoodOrderingSystem.GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_phone;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_discount;
+        private System.Windows.Forms.Label label3;
     }
 }
