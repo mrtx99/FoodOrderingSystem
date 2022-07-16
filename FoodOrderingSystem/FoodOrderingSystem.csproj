@@ -61,6 +61,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\AdminBL.cs" />
+    <Compile Include="BL\LoginBL.cs" />
+    <Compile Include="BL\ManagerBL.cs" />
+    <Compile Include="BL\UserBL.cs" />
+    <Compile Include="DL\AdminDL.cs" />
+    <Compile Include="DL\DBConnection.cs" />
+    <Compile Include="DL\LoginDL.cs" />
+    <Compile Include="DL\ManagerDL.cs" />
+    <Compile Include="DL\UserDL.cs" />
     <Compile Include="DTO\LoginDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="GUI\AdminGUI.cs">
@@ -160,10 +169,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BL\" />
-    <Folder Include="DL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\welcome to new user.png" />
     <None Include="Resources\registernow.png" />
